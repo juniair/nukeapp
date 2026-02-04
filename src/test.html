@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery 예제</title>
+    <!-- jQuery CDN 가져오기 (필수) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // DOM이 준비되면 실행
+        $(document).ready(function(){
+            // 버튼 클릭 시 제목 변경 및 스타일 적용 [1]
+            $("#btn1").click(function(){
+                $("#title").text("jQuery가 동작합니다!");
+                $("#title").css("color", "blue");
+            });
+
+            // 문장 숨기기 [2]
+            $("#btn2").click(function(){
+                $(".content").hide();
+            });
+
+            // 문장 다시 보이기 [3]
+            $("#btn3").click(function(){
+                $(".content").show();
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <h1 id="title">안녕하세요.</h1>
+    <p class="content">이 문장은 jQuery로 조작됩니다.</p>
+    
+    <button id="btn1">제목 변경</button>
+    <button id="btn2">숨기기</button>
+    <button id="btn3">보이기</button>
+
+</body>
+</html>
